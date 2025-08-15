@@ -1,5 +1,3 @@
-
-
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
@@ -39,7 +37,7 @@ abstract class User {
     }
 
     public abstract void displayProfile();
-    
+
     public void contactSupport() {
         System.out.println(name + " is contacting support...");
     }
@@ -133,11 +131,12 @@ class Driver extends User {
     }
 }
 
+
 // Ride class
 class Ride {
     private static final double BASE_FARE = 20.50;
     private static final double PER_MILE_RATE = 3;
-    
+
     private Rider rider;
     private Driver driver;
     private String pickupLocation;
@@ -166,7 +165,7 @@ class Ride {
         if (paymentMethod instanceof HandCashPayment) {
             System.out.println("Ride completed. Please pay " + fare + " Taka to the driver");
         } else {
-            System.out.println("Ride completed. Fare: " + fare + " Taka");  
+            System.out.println("Ride completed. Fare: " + fare + " Taka");
         }
     }
 
@@ -246,8 +245,8 @@ class CreditCardPayment implements PaymentMethod {
             throw new PaymentException("Invalid payment amount: " + amount + " Taka");
         }
         System.out.println("Processing credit card payment of " + amount + " Taka");
-        System.out.println("Payment successful with card ending in " + 
-                          cardNumber.substring(cardNumber.length() - 4));
+        System.out.println("Payment successful with card ending in " +
+                cardNumber.substring(cardNumber.length() - 4));
     }
 }
 
@@ -267,6 +266,7 @@ class DigitalWalletPayment implements PaymentMethod {
         System.out.println("Payment successful with wallet: " + walletId);
     }
 }
+
 
 // Hand Cash Payment implementation
 class HandCashPayment implements PaymentMethod {
@@ -370,6 +370,7 @@ public class RideSharingSystem {
             int choice = scanner.nextInt();
             scanner.nextLine(); // consume newline
 
+
             switch (choice) {
                 case 1:
                     adminLogin();
@@ -469,6 +470,7 @@ public class RideSharingSystem {
             int choice = scanner.nextInt();
             scanner.nextLine(); // consume newline
 
+
             switch (choice) {
                 case 1:
                     driver.displayProfile();
@@ -563,6 +565,7 @@ public class RideSharingSystem {
 
         int choice = scanner.nextInt();
         scanner.nextLine(); // consume newline
+
 
         switch (choice) {
             case 1:
