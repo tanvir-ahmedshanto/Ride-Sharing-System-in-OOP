@@ -1,7 +1,7 @@
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
-
+//Rafi
 // Interface for vehicles
 interface Vehicle {
     void startRide();
@@ -130,8 +130,9 @@ class Driver extends User {
         return available;
     }
 }
+//Rafi
 
-
+//Tanvir
 // Ride class
 class Ride {
     private static final double BASE_FARE = 20.50;
@@ -228,7 +229,9 @@ class Bike implements Vehicle {
         return type + " bike (Reg: " + registrationNumber + ")";
     }
 }
+//Tanvir
 
+//Sourove
 // Payment method implementations
 class CreditCardPayment implements PaymentMethod {
     private String cardNumber;
@@ -305,6 +308,8 @@ class Admin extends User {
         }
     }
 }
+//Srouve
+//Tuser+ Tusiqe
 
 // Ride Sharing System with Menu
 public class RideSharingSystem {
