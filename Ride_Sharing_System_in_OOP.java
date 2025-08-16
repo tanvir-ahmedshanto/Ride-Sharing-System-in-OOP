@@ -8,12 +8,10 @@ interface Vehicle {
     void stopRide();
     String getVehicleInfo();
 }
-
 // Interface for payment methods
 interface PaymentMethod {
     void processPayment(double amount) throws PaymentException;
 }
-
 // Custom exception for payment failures
 class PaymentException extends Exception {
     public PaymentException(String message) {
